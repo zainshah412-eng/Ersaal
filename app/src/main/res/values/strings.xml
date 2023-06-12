@@ -120,5 +120,7 @@ By accepting these terms and conditions, you acknowledge and agree that the Ersa
     <string name="recents">Recents</string>
     <string name="settings">Settings</string>
     <string name="edit">Edit</string>
+    <string name="others">Others</string>
+    <string name="bank_of_azaadi">Bank of Azaadi</string>
 
 </resources>

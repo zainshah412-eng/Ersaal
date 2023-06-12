@@ -161,4 +161,6 @@ dependencies {
 
     // DotsIndicator
     implementation 'com.tbuonomo:dotsindicator:4.2'
+    // Circular Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

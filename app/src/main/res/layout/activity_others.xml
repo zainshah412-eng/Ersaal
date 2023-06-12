@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bg"
+    tools:context=".core.ui.activities.OthersActivity">
+        <RelativeLayout
+            android:id="@+id/headerCover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:elevation="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:src="@drawable/back"
+                app:tint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/backButton"
+                android:orientation="vertical">
+
+                <com.example.ersaal.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/others"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18ssp"
+                    app:font_name="objectiveExtraBold" />
+                <com.example.ersaal.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="Unsorted SMS"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/_10ssp"
+                    app:font_name="objectiveBold" />
+            </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/profile"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/add"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="visible" />
+
+        </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        style="@style/viewBorderColor"
+        android:layout_below="@id/headerCover"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOthersList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view" />
+</RelativeLayout>

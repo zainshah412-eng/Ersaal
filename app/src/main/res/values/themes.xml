@@ -18,8 +18,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="customBadgesStyle14" parent="@android:style/TextAppearance">
+    <item name="android:background">@drawable/circle_notification</item>
 
-
+    </style>
     <style name="Theme.Ersaal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Ersaal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -36,9 +38,14 @@
         <item name="android:background">@drawable/shape_rectangle_white</item>
     </style>
 
+    <style name="viewBorderColor">
+        <item name="android:background">@color/grey</item>
+    </style>
 
-
-
+    <style name="customBadgesStyle10" parent="@android:style/TextAppearance">
+        <item name="android:background">@drawable/shape_rectangle_for_recent</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
 
 
 </resources>

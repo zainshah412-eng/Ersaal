@@ -1,5 +1,6 @@
 package com.example.ersaal.core.ui.fragments
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -14,10 +15,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ersaal.R
 import com.example.ersaal.core.adapters.BannerAdapter
+import com.example.ersaal.core.ui.activities.OthersActivity
+import com.example.ersaal.core.ui.activities.SignUpActivity
 import com.example.ersaal.databinding.FragmentHomeBinding
 import com.example.ersaal.utils.SpacesItemDecoration
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), View.OnClickListener {
     private lateinit var _binding: FragmentHomeBinding
     private lateinit var bannerAdapter: BannerAdapter
     lateinit var layoutManagerPopular: LinearLayoutManager
@@ -44,6 +47,7 @@ class HomeFragment : Fragment() {
         listOfBanner.add(R.drawable.banner2)
         listOfBanner.add(R.drawable.banner3)
         setUpRVForBannerItems(listOfBanner)
+        _binding.othersWrap.setOnClickListener(this)
     }
 
     private fun setUpRVForBannerItems(dataList: ArrayList<Int>) {
@@ -59,5 +63,14 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         //  _binding = null
+    }
+
+    override fun onClick(v: View?) {
+        when (v) {
+            _binding.othersWrap -> {
+                startActivity(Intent(activity, OthersActivity::class.java))
+            }
+
+        }
     }
 }

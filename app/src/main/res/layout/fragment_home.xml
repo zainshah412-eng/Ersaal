@@ -95,6 +95,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/othersWrap"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/shape_rectangle_grey"
@@ -117,7 +118,7 @@
                             android:layout_marginEnd="@dimen/_10sdp"
                             android:layout_toStartOf="@+id/filterImg"
                             android:fontFamily="@font/objective_medium"
-                            android:text="@string/filters"
+                            android:text="@string/others"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_10ssp" />
                     </LinearLayout>
