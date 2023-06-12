@@ -1,2 +1,1 @@
-# Ersaal
-Jazz Cash Remainder Application
+# TestAsiignemnt for Scalio

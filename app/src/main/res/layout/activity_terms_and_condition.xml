@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bg"
+    tools:context=".core.ui.activities.TermsAndConditionActivity">
+
+    <RelativeLayout
+        android:id="@+id/headerCover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:elevation="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/backButton"
+            android:orientation="vertical">
+
+            <com.example.ersaal.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/terms_conditions"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_16ssp"
+                app:font_name="objectiveMedium" />
+        </LinearLayout>
+
+        <com.example.ersaal.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backButton"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/backButton"
+            android:includeFontPadding="false"
+            android:text="@string/last_updated_on_23_04_2023"
+            android:textColor="@color/grey"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textSize="@dimen/_10ssp"
+            app:font_name="objectiveRegular" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnContinue"
+        android:layout_below="@+id/headerCover"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:scrollbars="none">
+        <com.example.ersaal.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="@string/dumy_text"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textSize="@dimen/_10ssp"
+            app:font_name="objectiveRegular" />
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/shape_rectangle_yellow_round"
+        android:clickable="false"
+        android:fontFamily="@font/objective_regular"
+        android:text="@string/accept_continue"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>

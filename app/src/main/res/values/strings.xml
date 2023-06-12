@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Ersaal</string>
+    <string name="no_internet">No Internet Available</string>
+    <string name="alert_description">Alert</string>
+    <string name="dash">-</string>
+    <string name="alert_text">Alert</string>
+    <string name="ok_text">OK</string>
+    <string name="connection_time_out" translatable="false">Connection Time out</string>
+    <string name="error_msg">Empty or invalid string</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <!-- Login  -->
+    <string name="sign_in">Sign In</string>
+    <string name="we_re_happy">We\'re happy to see you again. To Use your account, log in first.</string>
+    <string name="some_id">+92</string>
+    <string name="dumy_no">3XX XXXXXXX</string>
+    <string name="i_agree_to">I agree to</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="continue_">Continue</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_email">Sign In with Email</string>
+    <string name="sign_in_with_facebook">Sign In with Facebook</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+
+    <!-- Login  -->
+    <string name="sign_up_with_email">Sign Up with Email</string>
+    <string name="sign_up_with_facebook">Sign up with Facebook</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+
+    <!-- Terms And Conidtion  -->
+
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="last_updated_on_23_04_2023">Last updated on 23/04/2023.</string>
+    <string name="accept_continue"><![CDATA[Accept & Continue]]></string>
+    <string name="dumy_text">1. Agreement
+Please read these Terms of Service (“Terms”, “Agreement”) carefully before using Ersaal (“the Software”) provided, operated and distributed by Switch Communications. (“the Company”, “us”, “we”, or “our”), located at Plot 250,Street
+6, I-9/2, Islamabad, Islamabad Capital Territory, 44000.
+This Agreement sets forth the legally binding terms and conditions for your
+use of the Software, its features (“the Services”) and any links, texts, videos, information, graphics, photos or other materials delivered through the Services (collectively referred to as “the Content”).
+The following Terms hereby agreed upon may define or limit the liability of the Company and its parents, subsidiaries, affiliates, related companies, officers, directors, employees, agents, representatives, partners, and licensors (collectively referred to as “Company Entities”).
+By accepting the present Terms you certify being in age and plainly capable of forming contract with the Company under the laws of the state of Pakistan or any other applicable jurisdiction. If you are accepting these Terms and using the Services on behalf of a company, organization, government, or other legal entity, you represent and warrant that you are authorized to do so. You may use the Services only in compliance with these Terms and all applicable local, state, national, and international laws, rules and regulations. Each of the sections below apply up to the maximum extent permitted under applicable law.
+By installing or using the Software in any manner, including, but not limited to, viewing or posting Content to the Services or clicking on the links provided by the Services, you agree to be bound by these Terms of Service.
+
+2. Limited License
+The Company gives you a personal, worldwide, royalty-free, non-transferable and non-exclusive license to use the software that is provided to you by the Company as part of the Services. This license is for the sole purpose of enabling you to use and enjoy the benefit of the Services as provided by the Company, in the manner permitted by these Terms.
+This license defines legal use of the Software, all updates, revisions, substitutions, and any copies of the Software made by or for you. All rights not expressly granted to you are reserved by the Company or their respective owners.
+The Services that the Company provides are always evolving and the form and nature of the Services that the Company provides may change from time to time without prior notice to you. In addition, the Company may stop (permanently or temporarily) providing the Services (or any features within the Services) to you or to users generally and may not be able to provide you with prior notice. We also retain the right to create limits on use at our sole discretion at any time without prior notice to you.
+
+3. Restrictions of Use
+You may not:
+i. access, tamper with, or use non-public areas of the Services, Switch Communications’ computer systems, or the technical delivery systems of Switch Communications’ providers;
+ii. probe, scan, or test the vulnerability of any system or network or breach or circumvent any security or authentication measures;
+iii. access or search or attempt to access or search the Services by any means (automated or otherwise) other than through our currently available, published interfaces that are provided by the Company (and only pursuant to those terms and conditions), unless you have been specifically allowed to do so in a separate agreement with the Company;
+iv. forge any TCP/IP packet header or any part of the header information in any email or posting, or in any way use the Services to send altered, deceptive or false source-identifying information;
+v. interfere with, or disrupt, (or attempt to do so), the access of any user, host or network, including, without limitation, sending a virus, overloading, flooding, spamming, mail-bombing the Services, or by scripting the creation of Content in such a manner as to interfere with or create an undue burden on the Services;
+vi. reverse engineer, modify, rent, sell, lease, loan, distribute the Software, or create derivative works (as defined by the Pakistan Copyrights Ordinance) or improvements (as defined by Pakistan patent law) from the Company’s Software or any portion thereof, whether for direct commercial or monetary gain or otherwise, without the Company’s prior, express, written permission;
+vii. use the Software in any unlawful manner, for any unlawful purpose, or in any manner inconsistent with these Terms;
+viii. use, or export the Software in violation of applicable Pakistan’s laws or regulations.
+This license terminates automatically if you violate any of the Terms. We reserve the right at all times (but will not have an obligation) to remove any Content posted by you through the Services and to suspend or terminate your account without liability to you.
+
+4. Warranty Disclaimer
+Your access to and use of the Services or any Content is at your own risk. You understand and agree that the Services is provided to you on an “AS IS” and “AS AVAILABLE” basis. Without limiting the foregoing, COMPANY ENTITIES DISCLAIM ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+Company Entities make no warranty and disclaim all responsibility and liability for: (i) the completeness, accuracy, availability, timeliness, security or reliability of the Services or any Content; (ii) any harm to your computer system, loss of data, or other harm that results from your access to or use of the Services, or any Content; (iii) the deletion of, or the failure to store or to transmit, any Content and other communications maintained by the Services; (iv) whether the Services will meet your requirements or be available on an uninterrupted, secure, or error-free basis. No advice or information, whether oral or written, obtained from Company Entities or through the Services, will create any warranty not expressly made herein.
+
+5. Limitations of Liability
+To the maximum extent permitted by applicable law, company entities shall not be liable for any indirect, incidental, special, consequential or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, good-will, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the services; (ii) any conduct or content of any third party on the services, including without limitation, any defamatory, offensive or illegal conduct of other users or third parties; (iii) any content obtained from the services; or (iv) unauthorized access, use or alteration of your transmissions or content.
+The content provided through the Switch Communications software may be delayed and the information it conveys may be inaccurate, or contain errors or omissions, and company entities will have no liability with respect thereto. The company may change or discontinue any aspect or feature of the software or the use of all or any features or technology in the software at any time without prior notice to you.
+The limitations of this subsection shall apply to any theory of liability, whether based on warranty, contract, statute, tort (including negligence) or otherwise, and whether or not company entities have been informed of the possibility of any such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.
+
+6. Data Collection &amp; Privacy
+The information you provide to the Company is subject to our Privacy Policy, which governs our collection and use of your information and that you can access by clicking here.
+We are committed to offering best-in-class guarantees for your privacy, therefore your personal information is protected by our Privacy Policy in a way that does not allow us to store nor make use of it under any circumstance, unless properly anonymized beforehand and for logging, debugging or machine learning purposes only. You understand that through your use of the Services you consent to the anonymous collection and use (as set forth in the Privacy Policy) of this information. As part of providing, you the Services, we may need to provide you with certain communications, such as software notifications, service announcements and administrative messages. These communications are considered part of the Services and you may not be able to opt-out from the ones necessary to the Company’s compliance with its own legal obligations.
+
+7. Auto-Updater
+You agree that portions the Software may automatically download and install data and portions of software code to update its own source code without prior notification.
+
+8. Intellectual Property
+The Software and its original content, features and functionality are owned by Switch Communications, Inc. and are protected by international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws of both the State of Pakistan and foreign countries.
+
+9. Termination
+We may terminate your access to the Software, without cause or notice, which may result in the forfeiture and destruction of all information associated with you. All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimer, indemnity, and limitations of liability.
+
+10. Links to Other Sites
+Our Software provides links to third-party sites that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party sites or services. We strongly advise you to read the terms and conditions and privacy policy of any third-party site that you visit.
+
+11. Governing Law
+This Software License and the relationship between you and the Company is governed by the laws of the state of Pakistan without regard to its conflict of law provisions. You and the Company agree to submit to the personal and exclusive jurisdiction of the courts located within the state of Pakistan.
+
+12. Changes to This Agreement
+We reserve the right, at our sole discretion, to modify or replace these Terms of Service by posting the updated terms on the Site. Your continued use of the Software after any such changes constitutes your acceptance of the new Terms of Service.
+Please review this Agreement periodically for changes. If you do not agree to any of this Agreement or any changes to this Agreement, do not use, access or continue to access the Software and uninstall the Software immediately.
+
+13. App Functionality
+By downloading and using the Ersaal app, you acknowledge and agree that the app will become the main messages handler for your device. This means that all messages, including SMS and MMS, will be routed through the Ersaalapp. In order to function properly, the app requires access to all data related to messages, including but not limited to message content, sender and recipient information, timestamps, and attachments.
+By using the Ersaal app, you grant the app permission to access and use this data for the purpose of providing messaging services. The app will take reasonable measures to protect your data, including encryption and other security measures, but cannot guarantee complete security.
+By accepting these terms and conditions, you acknowledge and agree that the Ersaal app will have access to all data related to messages on your device, and that you are solely responsible for any messages you send or receive using the app. You also acknowledge and agree that the app may collect and use data for the purpose of improving its services and features, as well as for marketing and advertising purposes.</string>
+
+    <!-- Otp  -->
+    <string name="enter_your_otp_below">Enter Your OTP below</string>
+    <string name="an_otp_has_been_sent_to">An OTP has been sent to</string>
+    <string name="_0301">0301-******</string>
+    <string name="number">number</string>
+    <string name="folders">Folders</string>
+    <string name="filters">Filters</string>
+    <string name="promos">Promos</string>
+    <string name="discounts">Discounts</string>
+    <string name="banks">Banks</string>
+    <string name="family">Family</string>
+    <string name="orders">Orders</string>
+    <string name="office">Office</string>
+    <string name="tour">Tour</string>
+    <string name="frequents">Frequents</string>
+    <string name="create_folder">Create Folder+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="scheduler">Scheduler</string>
+    <string name="recents">Recents</string>
+    <string name="settings">Settings</string>
+    <string name="edit">Edit</string>
+
+</resources>

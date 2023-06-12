@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ersaal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+
+    <application
+        android:name="com.example.ersaal.AppApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ersaal"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".BlockedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".core.ui.activities.OtpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ersaal.NoActionBar" />
+        <activity
+            android:name=".core.ui.activities.SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ersaal.NoActionBar" />
+        <activity
+            android:name=".core.ui.activities.TermsAndConditionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ersaal.NoActionBar" />
+        <activity
+            android:name=".core.ui.activities.SignInActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ersaal.NoActionBar" />
+        <activity
+            android:name=".core.ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ersaal.SplashAct"
+            android:exported="true"
+            android:theme="@style/Theme.Ersaal.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

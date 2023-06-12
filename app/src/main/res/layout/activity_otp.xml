@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bg"
+    tools:context=".core.ui.activities.OtpActivity">
+
+    <com.example.ersaal.utils.CustomTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:fontFamily="@font/objective_medium"
+        android:text="@string/enter_your_otp_below"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp" />
+
+    <LinearLayout
+        android:id="@+id/otpBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <com.example.ersaal.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/objective_medium"
+            android:text="@string/an_otp_has_been_sent_to"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.example.ersaal.utils.CustomTextView
+            android:id="@+id/phoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/objective_medium"
+            android:text="@string/_0301"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.example.ersaal.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/objective_medium"
+            android:text="@string/number"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        app:bar_enabled="false"
+        app:bar_height="2dp"
+        app:height="40dp"
+        app:length="4"
+        app:otp=""
+        app:otp_box_background="@drawable/shape_rectanglee_otp_round"
+        app:otp_text_size="24dp"
+        app:width="40dp" />
+
+</RelativeLayout>
