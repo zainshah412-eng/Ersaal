@@ -2,6 +2,7 @@ package com.example.ersaal.core.ui.fragments
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ersaal.R
 import com.example.ersaal.core.adapters.BannerAdapter
+import com.example.ersaal.core.ui.activities.OthersActivity
+import com.example.ersaal.core.ui.activities.SignUpActivity
 import com.example.ersaal.databinding.FragmentHomeBinding
 import com.example.ersaal.utils.SpacesItemDecoration
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -50,6 +53,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         listOfBanner.add(R.drawable.banner3)
         setUpRVForBannerItems(listOfBanner)
         _binding.filterCover.setOnClickListener(this)
+        _binding.othersWrap.setOnClickListener(this)
     }
 
     private fun setUpRVForBannerItems(dataList: ArrayList<Int>) {
@@ -83,6 +87,10 @@ class HomeFragment : Fragment(), View.OnClickListener {
             _binding.filterCover -> {
                 filterBottomSheet()
             }
-        }
+            _binding.othersWrap -> {
+                startActivity(Intent(activity, OthersActivity::class.java))
+            }
+
+    
     }
 }

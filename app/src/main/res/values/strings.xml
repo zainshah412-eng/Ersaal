@@ -135,5 +135,7 @@ By accepting these terms and conditions, you acknowledge and agree that the Ersa
     <string name="last_week">Last week</string>
     <string name="recently_created">Recently Created</string>
     <string name="deleted">Deleted</string>
+    <string name="others">Others</string>
+    <string name="bank_of_azaadi">Bank of Azaadi</string>
 
 </resources>
