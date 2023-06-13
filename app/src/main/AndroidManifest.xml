@@ -4,6 +4,7 @@
     package="com.example.ersaal">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission
         android:name="android.permission.POST_NOTIFICATIONS"
         tools:node="remove" />
@@ -17,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ersaal"
         tools:replace="android:allowBackup">
+        <activity
+            android:name=".core.ui.activities.CreateFolderActivity"
+            android:exported="false" />
         <activity
             android:name=".core.ui.activities.OthersActivity"
             android:exported="false" />

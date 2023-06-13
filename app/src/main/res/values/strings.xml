@@ -113,6 +113,7 @@ By accepting these terms and conditions, you acknowledge and agree that the Ersa
     <string name="tour">Tour</string>
     <string name="frequents">Frequents</string>
     <string name="create_folder">Create Folder+</string>
+    <string name="create_folder_">Create Folder</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
@@ -122,5 +123,7 @@ By accepting these terms and conditions, you acknowledge and agree that the Ersa
     <string name="edit">Edit</string>
     <string name="others">Others</string>
     <string name="bank_of_azaadi">Bank of Azaadi</string>
+    <string name="folder_name">Folder Name</string>
+    <string name="add_contacts">Add Contacts</string>
 
 </resources>
