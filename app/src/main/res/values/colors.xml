@@ -6,11 +6,14 @@
 
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="black_100">#151517</color>
+    <color name="black_200">#99262629</color>
     <color name="grey">#5C5C5C</color>
     <color name="grey_100">#757483</color>
     <color name="grey_200">#262629</color>
     <color name="grey_300">#0F1319</color>
     <color name="grey_400">#898989</color>
+    <color name="grey_500">#6C6B79</color>
     <color name="yellow">#D9FF40</color>
     <color name="yellow_100">#50593A</color>
 

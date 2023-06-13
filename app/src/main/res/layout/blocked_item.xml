@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_20sdp">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.45"
+        android:background="@color/grey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line">
+
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/profile" />
+
+        <com.example.ersaal.utils.CustomTextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/profileImg"
+            android:fontFamily="@font/objective_medium"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.example.ersaal.utils.CustomTextView
+            android:id="@+id/phoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName"
+            android:layout_toEndOf="@+id/profileImg"
+            android:fontFamily="@font/objective_medium"
+            android:text="@string/dumy_no"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_8ssp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
