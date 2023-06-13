@@ -83,14 +83,14 @@ class HomeFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        when(p0){
+        when(p0) {
             _binding.filterCover -> {
                 filterBottomSheet()
             }
             _binding.othersWrap -> {
                 startActivity(Intent(activity, OthersActivity::class.java))
             }
-
+        }
     
     }
 }
