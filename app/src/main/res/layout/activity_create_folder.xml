@@ -6,87 +6,150 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_bg"
     tools:context=".core.ui.activities.CreateFolderActivity">
-
-    <com.example.ersaal.utils.CustomTextView
-        android:id="@+id/tvCreateFolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_21sdp"
-        android:layout_marginTop="@dimen/_21sdp"
-        android:includeFontPadding="false"
-        android:text="@string/create_folder_"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_21ssp"
-        app:font_name="objectiveExtraBold" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvCreateFolder"
-        android:layout_marginTop="@dimen/_4sdp"
-        android:orientation="vertical">
-
-        <com.example.ersaal.utils.CustomTextView
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:padding="@dimen/_5sdp"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:text="@string/folder_name"
-            android:textColor="@color/white" />
+            android:layout_height="wrap_content">
+            <com.example.ersaal.utils.CustomTextView
+                android:id="@+id/tvCreateFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21sdp"
+                android:layout_marginTop="@dimen/_21sdp"
+                android:includeFontPadding="false"
+                android:text="@string/create_folder_"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_21ssp"
+                app:font_name="objectiveExtraBold" />
+            <LinearLayout
+                android:id="@+id/llRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCreateFolder"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_42sdp"
-            android:layout_marginStart="@dimen/_21sdp"
-            android:layout_marginEnd="@dimen/_21sdp"
-            android:background="@drawable/shape_rectangle_grey"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <com.example.ersaal.utils.CustomTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:padding="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:text="@string/add_contacts"
-            android:textColor="@color/white" />
+                    <com.example.ersaal.utils.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/folder_name"
+                        android:textColor="@color/white" />
 
-        <AutoCompleteTextView
-            android:id="@+id/edtSearchViewSeed"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_42sdp"
-            android:layout_marginStart="@dimen/_21sdp"
-            android:layout_marginEnd="@dimen/_21sdp"
-            android:background="@drawable/shape_rectangle_grey"
-            android:completionThreshold="2"
-            android:drawablePadding="8dp"
-            android:imeOptions="actionSearch"
-            android:includeFontPadding="false"
-            android:inputType="text"
-            android:maxLines="1"
-            android:padding="@dimen/_8sdp"
-            android:popupBackground="@drawable/shape_rectangle_grey"
-            android:textColor="@color/white"
-            android:textColorHint="@color/grey_100"
-            android:layout_marginBottom="@dimen/_4sdp"
-            android:textCursorDrawable="@null"
-            android:textSize="@dimen/_10sdp" />
-    </LinearLayout>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnContinue"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_35sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_35sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:background="@drawable/shape_rectangle_yellow_round"
-        android:clickable="false"
-        android:fontFamily="@font/objective_regular"
-        android:text="@string/create_folder_"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp"
-        android:layout_alignParentBottom="true"
-        android:textStyle="bold" />
+                    <com.example.ersaal.utils.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:text="@string/asterick"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtFolderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginStart="@dimen/_21sdp"
+                    android:layout_marginEnd="@dimen/_21sdp"
+                    android:background="@drawable/shape_rectangle_grey"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/_8sdp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_10sdp" />
+                <com.example.ersaal.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/assign_icon"
+                    android:textColor="@color/white" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21sdp"
+                    android:layout_marginEnd="@dimen/_21sdp"
+                    android:background="@drawable/shape_rectangle_grey"
+                    android:padding="@dimen/_8sdp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.example.ersaal.utils.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/add_contacts"
+                        android:textColor="@color/white" />
+
+                    <com.example.ersaal.utils.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/asterick"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtContacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginStart="@dimen/_21sdp"
+                    android:layout_marginEnd="@dimen/_21sdp"
+                    android:background="@drawable/shape_rectangle_grey"
+                    android:completionThreshold="2"
+                    android:drawablePadding="8dp"
+                    android:imeOptions="actionSearch"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_21sdp"
+                    android:popupBackground="@drawable/shape_rectangle_grey"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:layout_below="@+id/llRoot"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:background="@drawable/shape_rectangle_yellow_round"
+                android:clickable="false"
+                android:fontFamily="@font/objective_regular"
+                android:text="@string/create_folder_"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
 </RelativeLayout>

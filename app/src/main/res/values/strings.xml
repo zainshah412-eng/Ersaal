@@ -124,6 +124,8 @@ By accepting these terms and conditions, you acknowledge and agree that the Ersa
     <string name="others">Others</string>
     <string name="bank_of_azaadi">Bank of Azaadi</string>
     <string name="folder_name">Folder Name</string>
+    <string name="assign_icon">Assign Icon</string>
     <string name="add_contacts">Add Contacts</string>
+    <string name="asterick">*</string>
 
 </resources>
