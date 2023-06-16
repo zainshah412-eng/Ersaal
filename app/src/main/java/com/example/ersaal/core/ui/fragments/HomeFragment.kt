@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ersaal.R
 import com.example.ersaal.core.adapters.BannerAdapter
+import com.example.ersaal.core.ui.activities.CreateFolderActivity
 import com.example.ersaal.core.ui.activities.OthersActivity
 import com.example.ersaal.core.ui.activities.SignUpActivity
 import com.example.ersaal.databinding.FragmentHomeBinding
@@ -54,6 +55,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         setUpRVForBannerItems(listOfBanner)
         _binding.filterCover.setOnClickListener(this)
         _binding.othersWrap.setOnClickListener(this)
+        _binding.btnContinue.setOnClickListener(this)
     }
 
     private fun setUpRVForBannerItems(dataList: ArrayList<Int>) {
@@ -89,6 +91,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
             }
             _binding.othersWrap -> {
                 startActivity(Intent(activity, OthersActivity::class.java))
+            }
+            _binding.btnContinue -> {
+                startActivity(Intent(activity, CreateFolderActivity::class.java))
             }
         }
     
