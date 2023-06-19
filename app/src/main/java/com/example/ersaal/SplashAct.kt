@@ -18,6 +18,7 @@ class SplashAct : AppCompatActivity() {
     lateinit var binding: ActivitySplashBinding
     private var coroutineScope: Job? = null
     private val NAVIGATION_DELAY = 1 * 1000L // 2 sec of delay
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
