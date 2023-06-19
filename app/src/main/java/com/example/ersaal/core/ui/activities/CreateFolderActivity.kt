@@ -1,7 +1,5 @@
 package com.example.ersaal.core.ui.activities
 
-import com.example.ersaal.R
-import com.example.ersaal.databinding.ActivityCreateFolderBinding
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,42 +9,49 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ersaal.R
+import com.example.ersaal.core.adapters.AddContactAdapter
 import com.example.ersaal.core.adapters.AssignIconsAdapter
-import com.example.ersaal.core.adapters.OtherUsersAdapter
+import com.example.ersaal.core.model.assignorder.AddContacts
 import com.example.ersaal.core.model.assignorder.AssignIcon
-import com.example.ersaal.core.model.assignorder.OtherUsers
+import com.example.ersaal.databinding.ActivityCreateFolderBinding
 import com.example.ersaal.utils.ContactData
 import com.example.ersaal.utils.retrieveAllContacts
+
 
 class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickListener,
     View.OnClickListener {
     lateinit var binding: ActivityCreateFolderBinding
     private val REQUEST_CODE_READ_CONTACTS = 17
     private var assignIconAdapter: AssignIconsAdapter? = null
+    private var addContactAdapter: AddContactAdapter? = null
     var iconsList: ArrayList<AssignIcon> = ArrayList()
+    private var selectedContact: ContactData? = null
 
-    var contactsList: ArrayList<String> = ArrayList()
+    var arrContacts: ArrayList<String> = ArrayList()
+    private var itemPosition: Int = -1
+    private var contactName: String = ""
+    private var contactsList: ArrayList<AddContacts> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateFolderBinding.inflate(layoutInflater)
         setContentView(binding.root)
         checkPermissionAndShow()
         initView()
-        setUpOtherUsersRV()
+        setUpIconsRV()
+        setUpOtherContactsRV()
     }
 
     private fun initView() {
         binding.btnContinue.setOnClickListener(this)
     }
 
-    private fun setUpOtherUsersRV() {
+
+    private fun setUpIconsRV() {
         binding.recyclerView.layoutManager = GridLayoutManager(this, 7)
         iconsList.add(AssignIcon(R.drawable.arrow))
         iconsList.add(AssignIcon(R.drawable.basketball))
@@ -80,6 +85,20 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
         binding.recyclerView.adapter = assignIconAdapter
     }
 
+    private fun setUpOtherContactsRV() {
+//        if (contactsList.size>0){
+//            binding.rvContacts.visibility=View.VISIBLE
+//            binding.rvContacts.layoutManager = GridLayoutManager(this, 2)
+//            contactsList.add(AddContacts(R.drawable.profile, contactName))
+//            contactList.add(AddContacts(R.drawable.profile, contactName))
+//            contactList.add(AddContacts(R.drawable.profile, contactName))
+//            addContactAdapter = AddContactAdapter(this, contactList)
+//            binding.rvContacts.adapter = addContactAdapter
+        //    }
+
+
+    }
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String?>,
@@ -91,6 +110,7 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun checkPermissionAndShow() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -102,12 +122,30 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
             )
             val sb = StringBuilder()
             for (contact in contacts) {
-                contactsList.add(contact.name)
-            }
-            contactsList.add(sb.toString())
+                arrContacts.add(contact.name)
 
-            var contactAdapter: ArrayAdapter<String> =
-                ArrayAdapter(this, android.R.layout.simple_list_item_1, contactsList)
+//                contactsList.add(contact)
+                 contactName=contact.name.toString()
+
+            }
+            binding.rvContacts.visibility = View.VISIBLE
+            binding.rvContacts.layoutManager = GridLayoutManager(this, 2)
+            contactsList.add(AddContacts(R.drawable.profile,contactName))
+            addContactAdapter = AddContactAdapter(this,contactsList)
+            binding.rvContacts.adapter = addContactAdapter
+            addContactAdapter!!.notifyDataSetChanged()
+
+
+//            contactDataAdapter = ContactDataAdapter(this, R.layout.activity_create_folder, R.id.name, contactsList)
+//            binding.edtContacts.setAdapter(contactDataAdapter)
+//            binding.edtContacts.onItemClickListener =
+//                OnItemClickListener { adapterView, view, pos, id -> //this is the way to find selected object/item
+//                    selectedContact = adapterView.getItemAtPosition(pos) as ContactData
+//                }
+//            contactsList.add(sb.toString())
+
+            var contactAdapter =
+                ArrayAdapter(this, android.R.layout.simple_list_item_1, arrContacts)
             binding.edtContacts.setAdapter(contactAdapter)
             binding.edtContacts.threshold = 2
             Log.e("contactsList", sb.toString())
@@ -132,11 +170,25 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
         if (binding.edtFolderName.text.toString()
                 .isNotEmpty() && binding.edtContacts.text.toString().isNotEmpty()
         ) {
-            startActivity(Intent(this, OthersActivity::class.java))
+            val intent = Intent(this, ContactListActivity::class.java)
+            intent.putExtra("folderName", binding.edtFolderName.text.toString())
+            intent.putExtra("Contacts", binding.edtContacts.text.toString())
+            startActivity(intent)
         }
     }
 
     override fun onIconClick(position: Int, itemAtPos: AssignIcon) {
         Toast.makeText(this, position.toString(), Toast.LENGTH_SHORT).show()
     }
+
+//    @SuppressLint("NotifyDataSetChanged")
+//    override fun onIconClick(position: Int, itemAtPos: AssignIcon, positionOfItem: Int) {
+//        itemPosition = positionOfItem
+//        val icon = iconsList[positionOfItem]
+//        for (value in 0 until icon.assignIcon) {
+//            if (value.equals(itemAtPos))
+//                itemAtPos.isSelected = !itemAtPos.isSelected
+//        }
+//        assignIconAdapter!!.notifyDataSetChanged()
+//    }
 }

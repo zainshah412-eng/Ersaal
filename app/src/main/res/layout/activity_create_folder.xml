@@ -128,6 +128,18 @@
                     android:textColor="@color/white"
                     android:textCursorDrawable="@null"
                     android:textSize="@dimen/_10sdp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvContacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21sdp"
+                    android:layout_marginEnd="@dimen/_21sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:visibility="gone"
+                    android:background="@drawable/shape_rectangle_grey"
+                    android:padding="@dimen/_8sdp"
+
+                    />
             </LinearLayout>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnContinue"

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bg"
+    tools:context=".core.ui.activities.ContactListActivity">
+        <RelativeLayout
+            android:id="@+id/headerCover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:elevation="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"
+                app:tint="@color/white" />
+
+            <com.example.ersaal.utils.CustomTextView
+                android:id="@id/tvFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/family"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/backButton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                app:font_name="objectiveExtraBold" />
+
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_contacts"
+                android:layout_toStartOf="@id/profile"
+                android:layout_centerVertical="true"
+                android:visibility="visible" />
+                        <ImageView
+                            android:id="@+id/profile"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/ic_add_more_contacts"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="visible" />
+
+        </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        style="@style/viewBorderColor"
+        android:layout_below="@id/headerCover"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOthersList"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/edtFolderName"
+        android:layout_below="@+id/view" />
+    <EditText
+        android:id="@+id/edtFolderName"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_9sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_21sdp"
+        android:layout_marginEnd="@dimen/_21sdp"
+        android:background="@drawable/shape_rectangle_border"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:textColorHint="@color/white"
+        android:hint="Message"
+        android:layout_alignParentBottom="true"
+        android:drawableEnd="@drawable/msg"
+        android:drawablePadding="@dimen/_32sdp"
+        android:textSize="@dimen/_10sdp" />
+
+</RelativeLayout>

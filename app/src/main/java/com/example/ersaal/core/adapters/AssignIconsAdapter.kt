@@ -1,5 +1,6 @@
 package com.example.ersaal.core.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -23,6 +25,7 @@ import com.example.ersaal.databinding.ItemListRecentsBinding
 class AssignIconsAdapter(
     private val context: Context,
     private var dataList: ArrayList<AssignIcon>,
+//    private var positionOfItem: Int,
     private var iconClick: IconClickListener,
 ) :
     RecyclerView.Adapter<AssignIconsAdapter.ViewHolder>() {
@@ -40,19 +43,33 @@ class AssignIconsAdapter(
         return dataList.size
     }
 
+    @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         with(viewHolder)
         {
             val itemAtPos = dataList[position]
+
+//            if (itemAtPos.isSelected) {
+//                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.yellow))
+//            } else {
+//                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.white))
+
+//            }
+
             binding.img.setImageResource(itemAtPos.assignIcon)
             binding.img.setOnClickListener {
+//                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.yellow))
                 iconClick.onIconClick(position, itemAtPos)
+//                iconClick.onIconClick(position, itemAtPos, positionOfItem)
+//                notifyDataSetChanged()
+
             }
         }
     }
 
     interface IconClickListener {
+//        fun onIconClick(position: Int, itemAtPos: AssignIcon, positionOfItem: Int)
         fun onIconClick(position: Int, itemAtPos: AssignIcon)
     }
 
