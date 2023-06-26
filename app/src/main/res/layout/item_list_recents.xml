@@ -1,135 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_12sdp"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_6sdp"
     android:background="@color/black">
-
-    <RelativeLayout
-        android:id="@+id/headerCover2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginBottom="@dimen/_9sdp"
-        android:elevation="@dimen/_10sdp"
-        android:orientation="horizontal"
-        android:paddingStart="@dimen/_14sdp"
-        android:paddingEnd="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_9sdp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="@dimen/_45sdp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:src="@drawable/profile"
+        app:tint="@color/white" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/profile"
-            app:tint="@color/white" />
+    <com.example.ersaal.utils.CustomTextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:includeFontPadding="false"
+        android:text="@string/bank_of_azaadi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:font_name="objectiveMedium"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="@id/profile" />
+    <com.example.ersaal.utils.CustomTextView
+        android:id="@+id/tvFolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/customBadgesStyle10"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:text="Family"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="@+id/userName"
+        app:layout_constraintStart_toEndOf="@id/userName"
+        android:textSize="@dimen/_8ssp"
+        app:font_name="objectiveMedium" />
 
-        <LinearLayout
-            android:id="@+id/llMsg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_toEndOf="@+id/profile"
-            android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:orientation="horizontal">
-            <com.example.ersaal.utils.CustomTextView
-                android:id="@+id/userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:includeFontPadding="false"
-                android:text="@string/bank_of_azaadi"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15ssp"
-                app:font_name="objectiveMedium" />
-            <com.example.ersaal.utils.CustomTextView
-                android:id="@+id/tvFolder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/customBadgesStyle10"
-                android:includeFontPadding="false"
-                android:paddingStart="@dimen/_6sdp"
-                android:paddingTop="@dimen/_6sdp"
-                android:paddingEnd="@dimen/_6sdp"
-                android:paddingBottom="@dimen/_4sdp"
-                android:layout_marginStart="@dimen/_12sdp"
-                android:text="Family"
-                android:textSize="@dimen/_8ssp"
-                app:font_name="objectiveMedium" />
-        </LinearLayout>
+    <com.example.ersaal.utils.CustomTextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:padding="@dimen/_4sdp"
+        android:text="Hello!"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_10ssp"
+        app:font_name="objectiveRegular"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
 
+    <com.example.ersaal.utils.CustomTextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/objective_regular"
+        android:text="9:40"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/grey"
+        android:visibility="visible" />
 
-            <com.example.ersaal.utils.CustomTextView
-                android:id="@+id/msg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:includeFontPadding="false"
-                android:text="Hello!"
-                android:maxLines="2"
-                android:textColor="@color/grey"
-                android:textSize="@dimen/_10ssp"
-                app:font_name="objectiveRegular" />
-        </LinearLayout>
-
-
-            <com.example.ersaal.utils.CustomTextView
-                android:id="@+id/time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/objective_regular"
-                android:text="9:40"
-                android:textColor="@color/grey"
-                android:visibility="visible" />
-
-            <RelativeLayout
-                android:id="@+id/rlMyJobsUpcomingNotification"
-                style="@style/customBadgesStyle14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/time"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_4sdp">
-
-                <com.example.ersaal.utils.CustomTextView
-                    android:id="@+id/upcomingNotication"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:includeFontPadding="false"
-                    android:paddingHorizontal="@dimen/_4sdp"
-                    android:paddingTop="@dimen/_3sdp"
-                    android:paddingBottom="@dimen/_2sdp"
-                    android:text="22"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_8ssp"
-                    app:font_name="objectiveRegular" />
-
-            </RelativeLayout>
-
-
-    </RelativeLayout>
+    <com.example.ersaal.utils.CustomTextView
+        android:id="@+id/upcomingNotication"
+        style="@style/customBadgesStyle14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="22"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        app:font_name="objectiveRegular"
+        app:layout_constraintEnd_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/time" />
 
     <View
         style="@style/viewBorderColor"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_1sdp"
-        android:layout_below="@id/headerCover2"
-        android:layout_marginStart="@dimen/_18sdp"
-        android:layout_marginEnd="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="@id/time"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="@id/profile"
+        app:layout_constraintTop_toBottomOf="@id/profile"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
         android:layout_marginBottom="@dimen/_8sdp"
-
         />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
