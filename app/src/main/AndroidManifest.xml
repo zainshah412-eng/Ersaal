@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ersaal"
         tools:replace="android:allowBackup">
+
         <activity
             android:name=".core.ui.activities.BlockedActivity"
             android:exported="false"
