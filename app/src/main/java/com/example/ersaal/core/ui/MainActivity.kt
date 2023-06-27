@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.bottomNavigationView.menu.getItem(2).isEnabled = false
         initView()
 
     }

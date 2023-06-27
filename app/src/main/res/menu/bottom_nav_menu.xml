@@ -9,11 +9,14 @@
         android:id="@+id/navigation_scheduler"
         android:icon="@drawable/schedular"
         android:title="@string/scheduler" />
+    <item
+        android:id="@+id/placeHolder"
+        android:title="" />
 
-<!--    <item-->
-<!--        android:id="@+id/navigation_create"-->
-<!--        android:icon="@drawable/home_unselected"-->
-<!--        android:title="Create"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/navigation_create"-->
+    <!--        android:icon="@drawable/home_unselected"-->
+    <!--        android:title="Create"/>-->
 
     <item
         android:id="@+id/navigation_recents"
