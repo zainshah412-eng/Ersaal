@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
         binding.bottomNavigationView.menu.getItem(2).isEnabled = false
         initView()
-
     }
 
     private fun initView() {
@@ -43,7 +42,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //        navController.addOnDestinationChangedListener() { _, destination, _ ->
 //            appCloseCheck = destination.id == R.id.navigation_home
 //        }
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
