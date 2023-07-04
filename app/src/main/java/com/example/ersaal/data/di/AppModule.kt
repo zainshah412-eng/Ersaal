@@ -1,7 +1,7 @@
 package com.example.ersaal.data.di
 
 import android.content.Context
-import com.example.ersaal.core.repo.KitchenManagerRepo
+import com.example.ersaal.core.repo.ErsaalRepo
 import com.example.ersaal.data.remote.ApiService
 import com.example.ersaal.data.remote.RemoteDataSource
 import com.example.ersaal.utils.AppConstants
@@ -66,6 +66,6 @@ object AppModule {
     fun provideRepository(
         remoteDataSource: RemoteDataSource
     ) =
-        KitchenManagerRepo(remoteDataSource)
+        ErsaalRepo(remoteDataSource)
 
 }

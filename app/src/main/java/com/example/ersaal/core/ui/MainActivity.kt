@@ -31,17 +31,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initView() {
-//        fragmentManager = supportFragmentManager
-//        val navHostFragment =
-//            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-//        navController = navHostFragment.navController
-//        binding.bottonNav.setupWithNavController(navController)
-//
-//    //    setupActionBarWithNavController(navController)
-//
-//        navController.addOnDestinationChangedListener() { _, destination, _ ->
-//            appCloseCheck = destination.id == R.id.navigation_home
-//        }
+        fragmentManager = supportFragmentManager
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
+        binding.bottomNavigationView.setupWithNavController(navController)
+
+    //    setupActionBarWithNavController(navController)
+
+        navController.addOnDestinationChangedListener() { _, destination, _ ->
+            appCloseCheck = destination.id == R.id.navigation_home
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

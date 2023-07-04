@@ -11,7 +11,7 @@ import com.example.ersaal.databinding.ItemListAddContactsBinding
 
 class AddContactAdapter(
     private val context: Context,
-    private var dataList: ArrayList<AddContacts>,
+    private var dataList: ArrayList<String>,
 ) :
     RecyclerView.Adapter<AddContactAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: ItemListAddContactsBinding) :
@@ -33,8 +33,8 @@ class AddContactAdapter(
         with(viewHolder)
         {
             val itemAtPos = dataList[position]
-            binding.img.setImageResource(itemAtPos.profileImg)
-            binding.name.text = itemAtPos.name
+          //  binding.img.setImageResource(itemAtPos.profileImg)
+            binding.name.text = itemAtPos
             binding.del.setOnClickListener {
 //                deleteItem(position)
             }

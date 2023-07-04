@@ -25,7 +25,6 @@ import com.example.ersaal.databinding.ItemListRecentsBinding
 class AssignIconsAdapter(
     private val context: Context,
     private var dataList: ArrayList<AssignIcon>,
-//    private var positionOfItem: Int,
     private var iconClick: IconClickListener,
 ) :
     RecyclerView.Adapter<AssignIconsAdapter.ViewHolder>() {
@@ -57,6 +56,7 @@ class AssignIconsAdapter(
 
 //            }
 
+
             binding.img.setImageResource(itemAtPos.assignIcon)
             binding.img.setOnClickListener {
 //                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.yellow))
@@ -67,9 +67,13 @@ class AssignIconsAdapter(
             }
         }
     }
+//    fun selectedPosition(currentPos:Int){
+//        isSeleecteed = currentPos
+//        notifyDataSetChanged()
+//    }
 
     interface IconClickListener {
-//        fun onIconClick(position: Int, itemAtPos: AssignIcon, positionOfItem: Int)
+        //        fun onIconClick(position: Int, itemAtPos: AssignIcon, positionOfItem: Int)
         fun onIconClick(position: Int, itemAtPos: AssignIcon)
     }
 

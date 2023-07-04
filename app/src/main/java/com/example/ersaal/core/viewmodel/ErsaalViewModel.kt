@@ -1,18 +1,15 @@
 package com.example.ersaal.core.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.switchMap
 
-import com.example.ersaal.core.repo.KitchenManagerRepo
-import com.example.ersaal.utils.Resource
+import com.example.ersaal.core.repo.ErsaalRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class KitchenManagertViewModel @Inject constructor(
-    private val kitchenManagerRepo: KitchenManagerRepo
+class ErsaalViewModel @Inject constructor(
+    private val ersaalRepo: ErsaalRepo
 ) : ViewModel() {
     private val _getProfile = MutableLiveData<Void>()
     private val _getService = MutableLiveData<Void>()
