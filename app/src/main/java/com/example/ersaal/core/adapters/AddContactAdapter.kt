@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ersaal.core.model.assignorder.AddContacts
+import com.example.ersaal.core.model.assignorder.AssignIcon
 import com.example.ersaal.databinding.ItemListAddContactsBinding
 
 class AddContactAdapter(
     private val context: Context,
     private var dataList: ArrayList<String>,
+    private var iconClick: IconClickListener,
 ) :
     RecyclerView.Adapter<AddContactAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: ItemListAddContactsBinding) :
@@ -33,17 +35,16 @@ class AddContactAdapter(
         with(viewHolder)
         {
             val itemAtPos = dataList[position]
-          //  binding.img.setImageResource(itemAtPos.profileImg)
             binding.name.text = itemAtPos
             binding.del.setOnClickListener {
-//                deleteItem(position)
+                iconClick.onIconClick(position, itemAtPos)
+
             }
         }
     }
 
-    private fun deleteItem(index: Int) {
-        dataList.removeAt(index)
-        notifyDataSetChanged()
+    interface IconClickListener {
+        fun onIconClick(position: Int, itemAtPos: String)
     }
 
 

@@ -31,7 +31,9 @@ class AssignIconsAdapter(
     inner class ViewHolder(val binding: ItemListIconsBinding) :
         RecyclerView.ViewHolder(binding.root)
 
+    private var isSelected: Int = -1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
         val binding =
             ItemListIconsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
@@ -49,31 +51,26 @@ class AssignIconsAdapter(
         {
             val itemAtPos = dataList[position]
 
-//            if (itemAtPos.isSelected) {
-//                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.yellow))
-//            } else {
-//                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.white))
+            if (position == isSelected) {
+                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.yellow))
+            } else {
+                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.white))
 
-//            }
-
-
+            }
             binding.img.setImageResource(itemAtPos.assignIcon)
             binding.img.setOnClickListener {
-//                binding.img.setColorFilter(ContextCompat.getColor(context, R.color.yellow))
                 iconClick.onIconClick(position, itemAtPos)
-//                iconClick.onIconClick(position, itemAtPos, positionOfItem)
-//                notifyDataSetChanged()
 
             }
         }
     }
-//    fun selectedPosition(currentPos:Int){
-//        isSeleecteed = currentPos
-//        notifyDataSetChanged()
-//    }
+
+    fun selectedPosition(currentPos: Int) {
+        isSelected = currentPos
+        notifyDataSetChanged()
+    }
 
     interface IconClickListener {
-        //        fun onIconClick(position: Int, itemAtPos: AssignIcon, positionOfItem: Int)
         fun onIconClick(position: Int, itemAtPos: AssignIcon)
     }
 

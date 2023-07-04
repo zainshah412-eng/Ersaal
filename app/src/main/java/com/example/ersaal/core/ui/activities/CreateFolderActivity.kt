@@ -25,14 +25,13 @@ import com.example.ersaal.utils.retrieveAllContacts
 
 
 class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickListener,
+    AddContactAdapter.IconClickListener,
     View.OnClickListener {
     lateinit var binding: ActivityCreateFolderBinding
     private val REQUEST_CODE_READ_CONTACTS = 17
     private var assignIconAdapter: AssignIconsAdapter? = null
     private var addContactAdapter: AddContactAdapter? = null
     var iconsList: ArrayList<AssignIcon> = ArrayList()
-    private var selectedContact: ContactData? = null
-
     var arrContacts: ArrayList<String> = ArrayList()
     private var contactsList: ArrayList<String> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,7 +85,7 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
 
     private fun setUpOtherContactsRV() {
         binding.rvContacts.layoutManager = GridLayoutManager(this, 2)
-        addContactAdapter = AddContactAdapter(this, contactsList)
+        addContactAdapter = AddContactAdapter(this, contactsList, this)
         binding.rvContacts.adapter = addContactAdapter
     }
 
@@ -115,7 +114,7 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
             }
 
             var contactAdapter =
-                ArrayAdapter(this, android.R.layout.simple_list_item_1, arrContacts)
+                ArrayAdapter(this, R.layout.item_list_contacts, arrContacts)
             binding.edtContacts.setAdapter(contactAdapter)
             binding.edtContacts.threshold = 2
             binding.edtContacts.onItemClickListener =
@@ -154,18 +153,12 @@ class CreateFolderActivity : AppCompatActivity(), AssignIconsAdapter.IconClickLi
     }
 
     override fun onIconClick(position: Int, itemAtPos: AssignIcon) {
-        Toast.makeText(this, position.toString(), Toast.LENGTH_SHORT).show()
+        assignIconAdapter?.selectedPosition(position)
 
     }
-
-//    @SuppressLint("NotifyDataSetChanged")
-//    override fun onIconClick(position: Int, itemAtPos: AssignIcon, positionOfItem: Int) {
-//        itemPosition = positionOfItem
-//        val icon = iconsList[positionOfItem]
-//        for (value in 0 until icon.assignIcon) {
-//            if (value.equals(itemAtPos))
-//                itemAtPos.isSelected = !itemAtPos.isSelected
-//        }
-//        assignIconAdapter!!.notifyDataSetChanged()
-//    }
+    @SuppressLint("NotifyDataSetChanged")
+    override fun onIconClick(position: Int, itemAtPos: String) {
+        contactsList.remove(itemAtPos)
+        addContactAdapter!!.notifyDataSetChanged()
+    }
 }
